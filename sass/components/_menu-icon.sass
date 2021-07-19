@@ -1,0 +1,19 @@
+@use '../abstracts/variables'
+@use '../abstracts/mixins'
+
+.menu-icon
+  display: flex
+  align-items: center
+  height: 15px
+
+  div
+    width: 24px
+    height: 1px
+    background-color: variables.$dark-blue
+    position: relative
+
+    &::before
+      @include mixins.menu-bar(-5px)
+
+    &::after
+      @include mixins.menu-bar(5px)

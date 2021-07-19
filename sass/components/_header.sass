@@ -1,0 +1,74 @@
+@use '../abstracts/variables'
+@use '../abstracts/mixins'
+
+.visible
+  display: block
+
+header
+  background-color: variables.$white
+  position: sticky
+  top: 0
+
+  .container
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .button-link
+    display: none
+
+  img
+    padding: 1rem 0
+
+  nav
+    display: none
+    position: absolute
+    top: calc(100% + 1rem)
+    left: 0
+    right: 0
+    z-index: 5
+    background-color: variables.$white
+    border-radius: 4px
+    border: 1px solid variables.$dark-blue
+
+    a
+      display: block
+      padding: 1rem 0
+      text-align: center
+      color: variables.$dark-blue
+
+@mixin tablet
+  header
+    nav
+      border: none
+      display: block
+      position: static
+
+      li
+        display: inline-block
+
+      a
+        padding: 0.5rem 0
+        margin: 0 0.5rem
+        color: variables.$gray
+
+  .menu-icon
+    display: none
+
+@mixin desktop
+  header
+    .button-link
+      display: block
+
+    nav
+      a
+        border-bottom: 4px solid transparent
+        border-top: 4px solid transparent
+        transition: all 0.3s
+        padding-top: 1.5rem
+        padding-bottom: 1.5rem
+
+      a:hover
+        color: variables.$dark-blue
+        border-bottom-color: variables.$green

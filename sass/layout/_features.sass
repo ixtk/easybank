@@ -1,0 +1,28 @@
+.features-section
+  text-align: center
+  background-color: hsl(220, 16%, 96%)
+
+  img
+    display: inline-block
+
+.features
+  margin-top: 3rem
+
+  div
+    margin-bottom: 2rem
+
+@mixin tablet
+  .features
+    display: grid
+    grid-template-columns: auto auto
+    gap: 2rem
+
+    div
+      margin: 0
+
+  h2, .features-section
+    text-align: left
+
+@mixin desktop
+  .features
+    grid-template-columns: repeat(4, auto)

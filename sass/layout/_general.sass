@@ -1,0 +1,14 @@
+@use '../abstracts/mixins'
+
+.container
+  @include mixins.max-width(90%)
+
+section:not(.hero-section)
+  padding: 3rem 0
+
+h2
+  text-align: center
+
+@mixin desktop
+  .container
+    @include mixins.max-width(80%)

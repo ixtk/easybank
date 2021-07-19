@@ -1,0 +1,71 @@
+@use '../abstracts/variables'
+@use '../abstracts/mixins'
+
+footer
+  background-color: variables.$dark-blue
+  padding: 2rem 0
+
+  span
+    color: variables.$gray
+
+  nav
+    a
+      display: block
+      text-align: center
+
+  a
+    padding: 0.5rem
+    color: variables.$white
+
+  .container
+    display: grid
+    justify-items: center
+    row-gap: 2rem
+
+@mixin desktop
+  path
+    transition: fill 0.3s
+
+  footer
+    padding: 3rem 0
+
+    .container
+      grid-template: auto auto / 1fr 1fr 1.5fr
+      justify-content: space-between
+      align-items: center
+
+    .button-link, span
+      justify-self: end
+
+    img
+      justify-self: start
+
+    .button-link
+      grid-area: 1 / 3 / 2 / 4
+
+    span
+      grid-area: 2 / 3
+
+    nav
+      grid-area: 1 / 2 / 3 / 3
+
+      a
+        text-align: left
+        transition: color 0.3s
+
+        &:hover
+          color: variables.$green
+
+    ul
+      display: grid
+      grid-template: auto auto auto / auto auto
+      justify-items: start
+      column-gap: 5rem
+
+  .social-links
+    grid-row: 2
+    justify-self: start
+    
+    a:hover
+      path
+        fill: variables.$green

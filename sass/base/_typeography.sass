@@ -1,0 +1,78 @@
+@use '../abstracts/variables'
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap')
+
+body
+  font-family: 'Public Sans', sans-serif
+  line-height: 1.5
+
+h1, h2, h3, h4
+  font-weight: 400
+  color: variables.$dark-blue
+  line-height: 1.2
+
+p, span, address
+  color: variables.$gray
+
+h1
+  font-size: 2.5rem
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.25rem
+
+p, a
+  font-size: 0.9rem
+
+address
+  font-size: 0.625rem
+  a
+    font-size: inherit
+
+.features-section
+  p
+    max-width: 60ch
+    margin-left: auto
+    margin-right: auto
+
+.features
+  p
+    margin-left: auto
+    margin-right: auto
+    max-width: 50ch
+
+article p
+  font-size: 0.8rem
+
+@mixin tablet
+  a, span
+    font-size: 0.875rem
+
+  h3
+    font-size: 1.5rem
+
+  .hero-section
+    .container p
+      max-width: 60ch
+      margin-left: auto
+      margin-right: auto
+
+  .features-section
+    p
+      margin-left: 0
+
+@mixin desktop
+  h1
+    font-size: 3.5rem
+    margin-top: 1rem
+    margin-bottom: 0
+
+  p
+    font-size: 1rem
+
+  .hero-section
+    .container p
+      margin-left: 0
+      margin-top: 2rem
+      margin-bottom: 2rem

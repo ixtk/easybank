@@ -1,0 +1,31 @@
+@use './base/reset'
+@use './base/typeography'
+
+@use './layout/general'
+@use './layout/hero'
+@use './layout/features'
+@use './layout/articles'
+
+@use './components/header'
+@use './components/menu-icon'
+@use './components/button-link'
+@use './components/article'
+@use './components/footer'
+
+@media only screen and(min-width: 720px)
+  @include header.tablet
+  @include features.tablet
+  @include typeography.tablet
+  @include hero.tablet
+
+@media only screen and(min-width: 1200px)
+  @include header.desktop
+  @include footer.desktop
+  @include typeography.desktop
+  @include features.desktop
+  @include general.desktop
+  @include hero.desktop
+
+// TODO justify-content vs items
+// TODO translateY vs top
+// TODO background property repetition
